@@ -4,9 +4,8 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Optik Rayhan</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/style.css" />
 </head>
 <body>
@@ -41,11 +40,12 @@
                     </button>
                 </div>
 
-                <img
-                    src="profil.jpg"
-                    alt="Profil"
-                    class="profile-image"
-                >
+                <img 
+                    alt="Profil Petugas Klinik" 
+                    class="profile-image" 
+                    data-alt="A close-up portrait of a professional clinic administrator in a bright, modern setting. Lighting is high-key and soft, emphasizing a clean, corporate medical aesthetic. The image conveys trust and efficiency, fitting seamlessly into a minimalist healthcare dashboard UI." 
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcpadrigGAcJ0X4Nb43KfFHGMQX54NZBkt2qiAaURzSbo_3kozSGZy3CfgEd_CzPM90U9aIhCOtxZLfv5C9pGwePjjuWUrtsCRw3EHIb8RTCcHIJBkasNJ5nKwuGjOYo6OlVhLWw4ENiwUh16soKdyA_45fU8Pq9Pc7FCIKXKxl0XP0TqMtNNgWxJgyKZjLwDe-lUUM4cfTzlSHYBrASZRjZY6hQ04xFtfuh6ZoOMKFI5ziynnOS1di8mzHOaXkI61zUH43KQQwNJU"
+                />
             </div>
         </div>
 
@@ -53,11 +53,11 @@
 
 <!-- Main Content -->
     <main class="main-container">
-        <div class="layout-grid">
+        <div class="main-layout">
             <!-- LEFT CONTENT -->
             <div class="content-left">
                 <!-- DATA PELANGGAN -->
-                <section class="card glass-panel">
+                <section class="card">
                     <h2 class="section-title">
                         <span class="material-symbols-outlined">person</span>
                         Data Pelanggan
@@ -113,7 +113,7 @@
                 </section>
 
                 <!-- RESEP KACAMATA -->
-                <section class="card glass-panel">
+                <section class="card">
                     <h2 class="section-title">
                         <span class="material-symbols-outlined">eyeglasses</span>
                         Resep Kacamata
@@ -190,8 +190,7 @@
             <!-- RIGHT CONTENT -->
             <div class="content-right">
                 <!-- PEMERIKSAAN -->
-                <section class="card glass-panel">
-
+                <section class="card">
                     <h2 class="section-title">
                         <span class="material-symbols-outlined">visibility</span>
                         Pemeriksaan
@@ -237,8 +236,7 @@
                 </section>
 
                 <!-- TRANSAKSI -->
-                <section class="card glass-panel">
-
+                <section class="card">
                     <h2 class="section-title">
                         <span class="material-symbols-outlined">payments</span>
                         Transaksi
@@ -255,11 +253,9 @@
                     </div>
 
                     <div class="status-section">
-
                         <label>Status Pesanan</label>
 
                         <div class="status-grid">
-
                             <label class="status-card">
                                 <input type="radio" name="status">
                                 <span class="status-process">
@@ -294,59 +290,80 @@
         </div>
 
         <!-- HISTORY TABLE -->
-        <section class="card glass-panel table-card">
+        <section class="card table-card">
             <div class="table-header">
-                <h3>Riwayat Pasien & Transaksi</h3>
+                <h3>Riwayat Pasien</h3>
 
-                <input
-                    type="text"
-                    class="form-input search-input"
-                    placeholder="Cari ID, Nama..."
-                >
+                <div class="search-wrapper">
+                    <span class="material-symbols-outlined">search</span>
+
+                    <input
+                        type="text"
+                        class="form-input search-input"
+                        placeholder="Cari ID, Nama..."
+                    >
+                </div>
             </div>
 
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nama Pelanggan</th>
-                            <th>Tanggal</th>
-                            <th>Status</th>
-                            <th>Aksi</th>
-                        </tr>
-                    </thead>
+            <div class="history-table">
+                <div class="history-header">
+                    <div>ID</div>
+                    <div>Nama Pelanggan</div>
+                    <div>Tanggal</div>
+                    <div>Status</div>
+                    <div>Aksi</div>
+                </div>
 
-                    <tbody>
-                        <tr>
-                            <td>CUST-0891</td>
-                            <td>Budi Santoso</td>
-                            <td>12 Nov 2023</td>
-                            <td>
-                                <span class="status-info">
-                                    DIAMBIL
-                                </span>
-                            </td>
-                            <td>
-                                👁️ ✏️
-                            </td>
-                        </tr>
+                <div class="history-row">
+                    <div>CUST-0891</div>
+                    <div>Budi Santoso</div>
+                    <div>12 Nov 2023</div>
+                    <div>
+                        <span class="status-info">
+                            DIAMBIL
+                        </span>
+                    </div>
 
-                        <tr>
-                            <td>CUST-0890</td>
-                            <td>Siti Aminah</td>
-                            <td>10 Nov 2023</td>
-                            <td>
-                                <span class="status-process">
-                                    DIPROSES
-                                </span>
-                            </td>
-                            <td>
-                                👁️ ✏️
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                    <div class="action-cell">
+                        <button class="icon-btn-table">
+                            <span class="material-symbols-outlined">
+                                visibility
+                            </span>
+                        </button>
+
+                        <button class="icon-btn-table">
+                            <span class="material-symbols-outlined">
+                                edit
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="history-row">
+                    <div>CUST-0890</div>
+                    <div>Siti Aminah</div>
+                    <div>10 Nov 2023</div>
+
+                    <div>
+                        <span class="status-process">
+                            DIPROSES
+                        </span>
+                    </div>
+
+                    <div class="action-cell">
+                        <button class="icon-btn-table">
+                            <span class="material-symbols-outlined">
+                                visibility
+                            </span>
+                        </button>
+
+                        <button class="icon-btn-table">
+                            <span class="material-symbols-outlined">
+                                edit
+                            </span>
+                        </button>
+                    </div>
+                </div>
             </div>
 
             <div class="pagination">
